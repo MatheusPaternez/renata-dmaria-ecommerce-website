@@ -6,9 +6,8 @@ export default function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="" />
+        <Route path=""/>
       </Routes>
     </BrowserRouter>
   );
 }
-
