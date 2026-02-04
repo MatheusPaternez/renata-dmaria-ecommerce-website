@@ -18,6 +18,10 @@ const categories = [
         name: 'Acessories',
         image: 'https://images.unsplash.com/photo-1611923134239-b9be5816e23c?w=600&q=80',
     },
+    {
+        name: 'Sale',
+        image: 'https://images.unsplash.com/photo-1611923134239-b9be5816e23c?w=600&q=80',
+    },
 ];
 
 export default function CategorySection() {
