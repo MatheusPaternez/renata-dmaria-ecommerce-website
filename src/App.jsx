@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import CategorySection from "./components/CategorySection";
 import Footer from "./components/Footer";
 import FAQ from "./components/FAQ";
+import About from "./components/About";
 
 export default function App() {
   return (
@@ -12,9 +13,8 @@ export default function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-        </Routes>
-        <CategorySection />
-        <FAQ/>  
+          <Route path="/about" element={<About />} />
+        </Routes>  
         <Footer/>
         
       </div>

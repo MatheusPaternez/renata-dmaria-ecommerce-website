@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import CategorySection from './CategorySection';
+import FAQ from './FAQ';
 
 const slides = [
     {
@@ -43,6 +45,7 @@ const Home = () => {
     };
 
     return (
+        <>
         <section className="relative w-full h-[85vh] overflow-hidden bg-gray-100">
             <AnimatePresence mode='wait'>
                 <motion.div
@@ -111,6 +114,9 @@ const Home = () => {
                 ))}
             </div>
         </section>
+        <CategorySection />
+        <FAQ/>
+        </>
     );
 };
 
