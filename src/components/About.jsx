@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Logo from '../assets/logo.png'
 
 const About = () => {
   // Animation variants for scroll reveals
@@ -115,15 +116,11 @@ const About = () => {
               transition={{ duration: 0.8 }}
             >
                {/* Mosaic of detail shots */}
+              
               <img 
-                src="https://images.unsplash.com/photo-1550614000-4b9519e02a48?q=80&w=1974&auto=format&fit=crop" 
-                alt="Sewing detail" 
-                className="w-full h-64 object-cover mt-12"
-              />
-              <img 
-                src="https://images.unsplash.com/photo-1619551734325-81aaf323686c?q=80&w=1964&auto=format&fit=crop" 
+                src={Logo}
                 alt="Fabric texture" 
-                className="w-full h-64 object-cover"
+                className="w-full object-cover"
               />
             </motion.div>
           </div>
@@ -145,10 +142,37 @@ const About = () => {
             <span className="text-sm uppercase tracking-[0.2em] font-bold">Renata Dmaria</span>
             <span className="text-xs text-gray-400 mt-2">Founder & Creative Director</span>
             
-            {/* Optional Signature Graphic Placeholder */}
-            {/* <img src="/signature.png" alt="Signature" className="h-12 mt-6 opacity-60" /> */}
           </div>
         </motion.div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="bg-gray-100 py-16">
+        <div className="max-w-4xl mx-auto px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            className="text-center mb-8"
+          >
+            <h2 className="text-2xl md:text-3xl font-serif mb-2">Contact</h2>
+            <p className="text-gray-600">Have a question or want to collaborate? Send us a message and we'll get back to you shortly.</p>
+          </motion.div>
+
+          <motion.form
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-4"
+            onSubmit={(e) => e.preventDefault()}
+          >
+            <input aria-label="Your name" type="text" placeholder="Your name" className="p-3 border border-gray-200 bg-white" />
+            <input aria-label="Your email" type="email" placeholder="Your email" className="p-3 border border-gray-200 bg-white" />
+            <textarea aria-label="Message" placeholder="Message" className="md:col-span-2 p-3 border border-gray-200 bg-white h-32" />
+            <button type="submit" className="md:col-span-2 bg-black text-white py-3 px-6 hover:bg-gray-800">Send Message</button>
+          </motion.form>
+        </div>
       </section>
 
     </div>

@@ -4,7 +4,6 @@ import { Facebook, Instagram, Twitter, Mail, ArrowRight, CreditCard } from 'luci
 import { motion } from 'framer-motion';
 
 const Footer = () => {
-    // Mesmos links do Header para consistência
     const shopLinks = [
         { name: 'Dresses', path: '/dresses' },
         { name: 'Blouses', path: '/blouses' },
@@ -15,8 +14,7 @@ const Footer = () => {
 
     const infoLinks = [
         { name: 'About Us', path: '/about' },
-        { name: 'Contact', path: '/contact' },
-        { name: 'Privacy Policy', path: '/privacy' },
+        { name: 'Contact', path: '/about' }
     ];
 
     return (
@@ -108,6 +106,9 @@ const Footer = () => {
                         <p className="text-gray-300 font-light">
                             Av. Paulista, 1000<br />
                             São Paulo - SP, Brasil
+                        </p>
+                        <p className="text-gray-300 font-light"><br />
+                            contato@renatadmaria.com.br<br />
                         </p>
                     </div>
                 </div>
