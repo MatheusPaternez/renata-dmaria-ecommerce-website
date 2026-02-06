@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingBag } from 'lucide-react';
+import { ShoppingBag, Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useCart } from '../context/CartContext';
 
 const Header = () => {
+    const [mobileOpen, setMobileOpen] = useState(false);
     const navLinks = [
         { name: 'Dresses', path: '/dresses' },
         { name: 'Blouses', path: '/blouses' },
@@ -17,16 +18,24 @@ const Header = () => {
     const totalItems = cart.reduce((acc, item) => acc + item.qty, 0);
 
     return (
-        <header className="w-full flex flex-col font-sans">
+        <header className="w-full flex flex-col font-sans relative">
             {/* Top Bar */}
             <div className="bg-black text-white text-xs py-2 text-center tracking-widest uppercase">
                 Free shipping for orders over $99
             </div>
 
             {/* Main Navigation */}
-            <nav className="flex items-center justify-between px-8 py-6 bg-white shadow-sm relative z-50">
-                {/* Logo */}
-                <div className="flex-1">
+            <nav className="flex items-center justify-between px-6 md:px-8 py-4 bg-white shadow-sm z-50">
+                <div className="flex-1 flex items-center gap-4">
+                    <button
+                        onClick={() => setMobileOpen(prev => !prev)}
+                        className="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100"
+                        aria-label="Open menu"
+                        aria-expanded={mobileOpen}
+                    >
+                        {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+                    </button>
+
                     <Link to="/">
                         <h1 className="text-2xl tracking-[0.2em] font-serif uppercase text-gray-900">
                             Renata Dmaria
@@ -62,6 +71,34 @@ const Header = () => {
                     </Link>
                 </div>
             </nav>
+
+            {/* Mobile menu panel */}
+            {mobileOpen && (
+                <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-md z-40">
+                    <ul className="flex flex-col divide-y">
+                        {navLinks.map(link => (
+                            <li key={link.name} className="px-6 py-4">
+                                <Link
+                                    to={link.path}
+                                    onClick={() => setMobileOpen(false)}
+                                    className="block text-gray-700 uppercase tracking-wide text-sm"
+                                >
+                                    {link.name}
+                                </Link>
+                            </li>
+                        ))}
+                        <li className="px-6 py-4">
+                            <Link
+                                to="/cart"
+                                onClick={() => setMobileOpen(false)}
+                                className="block text-gray-700 uppercase tracking-wide text-sm"
+                            >
+                                Cart ({totalItems})
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            )}
         </header>
     );
 };

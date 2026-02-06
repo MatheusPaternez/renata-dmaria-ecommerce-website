@@ -42,7 +42,7 @@ const CartView = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 20 }}
-                  className="flex gap-6 bg-gray-50 p-6 rounded-lg items-start"
+                  className="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-gray-50 p-4 sm:p-6 rounded-lg items-start"
                 >
                   {/* Product Image */}
                   <div className="w-24 h-24 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0">
@@ -54,7 +54,7 @@ const CartView = () => {
                   </div>
 
                   {/* Product Details */}
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0 mt-2 sm:mt-0">
                     <h3 className="font-medium text-gray-900 mb-1">{item.name}</h3>
                     <p className="text-sm text-gray-600 mb-3">{item.category}</p>
                     <p className="text-lg font-semibold text-gray-900">
@@ -63,7 +63,7 @@ const CartView = () => {
                   </div>
 
                   {/* Quantity */}
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 mt-3 sm:mt-0 sm:mx-4 flex-shrink-0">
                     <button 
                       onClick={() => updateQuantity(item.id, item.qty - 1)}
                       className="p-1 hover:bg-gray-200 rounded transition-colors"
@@ -80,7 +80,7 @@ const CartView = () => {
                   </div>
 
                   {/* Item Total */}
-                  <div className="text-right">
+                  <div className="text-right mt-3 sm:mt-0 flex-shrink-0">
                     <p className="font-semibold text-gray-900 mb-3">
                       ${(item.price * item.qty).toFixed(2)}
                     </p>
