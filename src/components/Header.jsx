@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Search, User, ShoppingBag } from 'lucide-react';
+import { ShoppingBag } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useCart } from '../context/CartContext';
 
 const Header = () => {
     const navLinks = [
@@ -11,6 +12,9 @@ const Header = () => {
         { name: 'Accessories', path: '/accessories' },
         { name: 'Sale', path: '/sale' },
     ];
+
+    const { cart } = useCart();
+    const totalItems = cart.reduce((acc, item) => acc + item.qty, 0);
 
     return (
         <header className="w-full flex flex-col font-sans">
@@ -44,22 +48,18 @@ const Header = () => {
                     ))}
                 </ul>
 
-                {/* Icons */}
+                {/* Icon cart */}
                 <div className="flex-1 flex justify-end gap-6 items-center text-gray-700">
-                    <motion.button whileHover={{ scale: 1.1 }}>
-                        <Search size={20} />
-                    </motion.button>
-
-                    <motion.button whileHover={{ scale: 1.1 }}>
-                        <User size={20} />
-                    </motion.button>
-
-                    <motion.div className="relative cursor-pointer" whileHover={{ scale: 1.1 }}>
-                        <ShoppingBag size={20} />
-                        <span className="absolute -top-2 -right-2 bg-black text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">
-                            0
-                        </span>
-                    </motion.div>
+                    <Link to="/cart">
+                        <motion.div className="relative cursor-pointer" whileHover={{ scale: 1.1 }}>
+                            <ShoppingBag size={20} />
+                            {totalItems > 0 && (
+                                <span className="absolute -top-2 -right-2 bg-black text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">
+                                    {totalItems}
+                                </span>
+                            )}
+                        </motion.div>
+                    </Link>
                 </div>
             </nav>
         </header>

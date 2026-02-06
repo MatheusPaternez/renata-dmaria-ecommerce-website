@@ -3,31 +3,42 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import CategorySection from './CategorySection';
 import FAQ from './FAQ';
+import home1 from '../assets/home1.avif'
+import home2 from '../assets/home2.avif'
+import home3 from '../assets/home3.avif'
+import AboutCall from './AboutCall';
 
 const slides = [
     {
         id: 1,
-        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop",
+        image: home1,
         subtitle: "Dresses",
         title: "New Collection"
     },
     {
         id: 2,
-        image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop",
+        image: home2,
         subtitle: "SUMMER ESSENTIALS",
         title: "Elegant Blouses"
     },
     {
         id: 3,
-        image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=2070&auto=format&fit=crop",
+        image: home3,
         subtitle: "LIMITED EDITION",
-        title: "Signature Style Acessories"
+        title: "Signature Style Accessories"
     }
 ];
 
 const Home = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    const handleNext = () => {
+        setCurrentIndex((prev) => (prev + 1) % slides.length);
+    };
+    
+    const handlePrev = () => {
+        setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
+    };
     // Auto-slide functionality
     useEffect(() => {
         const timer = setInterval(() => {
@@ -35,15 +46,7 @@ const Home = () => {
         }, 5000); // 5 sec
         return () => clearInterval(timer);
     }, [currentIndex]);
-
-    const handleNext = () => {
-        setCurrentIndex((prev) => (prev + 1) % slides.length);
-    };
-
-    const handlePrev = () => {
-        setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
-    };
-
+    
     return (
         <>
         <section className="relative w-full h-[85vh] overflow-hidden bg-gray-100">
@@ -116,6 +119,7 @@ const Home = () => {
         </section>
         <CategorySection />
         <FAQ/>
+        <AboutCall/>
         </>
     );
 };

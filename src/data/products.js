@@ -1,3 +1,29 @@
+import LeatherHandbag from '../assets/leather-handbag.webp'
+import GoldEarrings from '../assets/gold-hoop-earrings.webp'
+import LeatherBelt from '../assets/leather-belt.webp'
+import SilkScarf from '../assets/silk-scarf.jpg'
+import WovenStrawBag from '../assets/woven-straw-bag.avif'
+import CulotteCropPants from '../assets/cullote-crop-pants.webp'
+import LeatherLeggings from '../assets/leather-leggings.jpg'
+import TailoredTrousers from '../assets/tailored-trousers.jpg'
+import WideLegLinenPants from '../assets/wide-leg-linen-pants.webp'
+import HighWaistJeans from '../assets/high-waist-jeans.webp'
+import BowTieBlouse from '../assets/bow-tie-blouse.jpg'
+import EmbroideredPeasantBlouse from '../assets/embroidered-peasant-blouse.webp'
+import LinenPoplinBlouse from '../assets/linen-poplin-blouse.jpg'
+import RuffleBlouse from '../assets/ruffle-blouse.webp'
+import SilkBlouse from '../assets/silk-blouse.jpg'
+import SatinSlipDress from '../assets/satin-slip-dress-sale.jpg'
+import GoldEarringsSale from '../assets/gold-earrings-sale.avif'
+import HighWaistJeansSale from '../assets/high-waist-jeans-sale.webp'
+import SequinMiniDress from '../assets/sequin-mini-dress.webp'
+import LinenShirtDress from '../assets/linen-shirt-dress.webp'
+import LinenShirtDressGreen from '../assets/linen-shirt-dress-green.webp'
+import SatinSlipDressNotSale from '../assets/satin-slip-dress.webp'
+import FloralWrapDress from '../assets/floral-wrap-dress.webp'
+import SequinMiniDressBlack from '../assets/sequin-mini-dress-black.webp'
+import VelvetMidiDress from '../assets/velvet-midi-dress.webp'
+
 export const products = [
   // Dresses (5)
   {
@@ -5,7 +31,7 @@ export const products = [
     name: "Velvet Midi Dress",
     category: "Dresses",
     price: 129.9,
-    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=800&auto=format&fit=crop",
+    image: VelvetMidiDress,
     description: "Elegant velvet finish, perfect for evening occasions."
   },
   {
@@ -13,7 +39,7 @@ export const products = [
     name: "Floral Wrap Dress",
     category: "Dresses",
     price: 99.0,
-    image: "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=800&auto=format&fit=crop",
+    image: FloralWrapDress,
     description: "Lightweight wrap dress with a delicate floral print."
   },
   {
@@ -21,15 +47,15 @@ export const products = [
     name: "Satin Slip Dress",
     category: "Dresses",
     price: 149.5,
-    image: "https://images.unsplash.com/photo-1520975913453-8a5b6f5a3b2f?q=80&w=800&auto=format&fit=crop",
+    image: SatinSlipDressNotSale,
     description: "Smooth satin slip that drapes beautifully for a sleek silhouette."
   },
   {
     id: 4,
     name: "Linen Shirt Dress",
     category: "Dresses",
-    price: 79.0,
-    image: "https://images.unsplash.com/photo-1503341455253-1cfd6e54f0c8?q=80&w=800&auto=format&fit=crop",
+    price: 69.0,
+    image: LinenShirtDressGreen,
     description: "Breathable linen with a relaxed, everyday fit."
   },
   {
@@ -37,49 +63,49 @@ export const products = [
     name: "Sequin Mini Dress",
     category: "Dresses",
     price: 179.0,
-    image: "https://images.unsplash.com/photo-1514996937319-344454492b37?q=80&w=800&auto=format&fit=crop",
+    image: SequinMiniDress,
     description: "Sparkling sequin mini for bold night-out looks."
   },
 
-  // Acessories (5)
+  // Accessories (5)
   {
     id: 6,
     name: "Leather Handbag",
-    category: "Acessories",
+    category: "Accessories",
     price: 299.0,
-    image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=800&auto=format&fit=crop",
+    image: LeatherHandbag,
     description: "Genuine leather tote with minimal hardware and structured shape."
   },
   {
     id: 7,
     name: "Woven Straw Bag",
-    category: "Acessories",
+    category: "Accessories",
     price: 89.0,
-    image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=800&auto=format&fit=crop",
+    image: WovenStrawBag,
     description: "Handwoven straw bag ideal for summer outings."
   },
   {
     id: 8,
     name: "Gold Hoop Earrings",
-    category: "Acessories",
+    category: "Accessories",
     price: 49.5,
-    image: "https://images.unsplash.com/photo-1536305030014-2e6b9f6af6b2?q=80&w=800&auto=format&fit=crop",
+    image: GoldEarrings,
     description: "Classic gold hoops with a polished finish."
   },
   {
     id: 9,
     name: "Silk Scarf",
-    category: "Acessories",
+    category: "Accessories",
     price: 39.99,
-    image: "https://images.unsplash.com/photo-1503342452485-86b7f6b8f4f6?q=80&w=800&auto=format&fit=crop",
+    image: SilkScarf,
     description: "Lightweight silk scarf with vibrant print."
   },
   {
     id: 10,
     name: "Leather Belt",
-    category: "Acessories",
+    category: "Accessories",
     price: 59.0,
-    image: "https://images.unsplash.com/photo-1526178610045-6a33b7d1cbe1?q=80&w=800&auto=format&fit=crop",
+    image: LeatherBelt,
     description: "Smooth leather belt with brushed metal buckle."
   },
 
@@ -88,8 +114,8 @@ export const products = [
     id: 11,
     name: "Silk Blouse",
     category: "Blouses",
-    price: 89.9,
-    image: "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?q=80&w=800&auto=format&fit=crop",
+    price: 289.9,
+    image: SilkBlouse,
     description: "Pure silk blouse with a modern, tailored cut."
   },
   {
@@ -97,7 +123,7 @@ export const products = [
     name: "Ruffle Blouse",
     category: "Blouses",
     price: 69.0,
-    image: "https://images.unsplash.com/photo-1520975913453-4b2d0b8f6e36?q=80&w=800&auto=format&fit=crop",
+    image: RuffleBlouse,
     description: "Lightweight blouse with delicate ruffle detailing."
   },
   {
@@ -105,7 +131,7 @@ export const products = [
     name: "Bow-Tie Blouse",
     category: "Blouses",
     price: 74.5,
-    image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=800&auto=format&fit=crop",
+    image: BowTieBlouse,
     description: "Sophisticated blouse with a bow-tie neck for polished looks."
   },
   {
@@ -113,7 +139,7 @@ export const products = [
     name: "Linen Poplin Blouse",
     category: "Blouses",
     price: 59.99,
-    image: "https://images.unsplash.com/photo-1520975913453-9c6fd3e1b0d6?q=80&w=800&auto=format&fit=crop",
+    image: LinenPoplinBlouse,
     description: "Crisp poplin with linen blend for breathable comfort."
   },
   {
@@ -121,7 +147,7 @@ export const products = [
     name: "Embroidered Peasant Blouse",
     category: "Blouses",
     price: 84.0,
-    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=800&auto=format&fit=crop",
+    image: EmbroideredPeasantBlouse,
     description: "Boho-inspired blouse with intricate embroidery."
   },
 
@@ -130,16 +156,16 @@ export const products = [
     id: 16,
     name: "Tailored Trousers",
     category: "Pants",
-    price: 110.0,
-    image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=800&auto=format&fit=crop",
+    price: 310.0,
+    image: TailoredTrousers,
     description: "High-waist tailored trousers for a polished silhouette."
   },
   {
     id: 17,
     name: "High-Waist Jeans",
     category: "Pants",
-    price: 99.99,
-    image: "https://images.unsplash.com/photo-1514996937319-344454492b37?q=80&w=800&auto=format&fit=crop",
+    price: 49.99,
+    image: HighWaistJeans,
     description: "Classic denim with flattering high-rise cut."
   },
   {
@@ -147,7 +173,7 @@ export const products = [
     name: "Wide-Leg Linen Pants",
     category: "Pants",
     price: 89.5,
-    image: "https://images.unsplash.com/photo-1520975913453-2b2b5b6d0a7e?q=80&w=800&auto=format&fit=crop",
+    image: WideLegLinenPants,
     description: "Relaxed wide-leg linen trousers for warm days."
   },
   {
@@ -155,7 +181,7 @@ export const products = [
     name: "Culotte Crop Pants",
     category: "Pants",
     price: 79.0,
-    image: "https://images.unsplash.com/photo-1520975913453-8c1b6b5d1b3e?q=80&w=800&auto=format&fit=crop",
+    image: CulotteCropPants,
     description: "Versatile culottes with a cropped hem for easy styling."
   },
   {
@@ -163,7 +189,7 @@ export const products = [
     name: "Leather Leggings",
     category: "Pants",
     price: 129.0,
-    image: "https://images.unsplash.com/photo-1495121605193-b116b5b09e17?q=80&w=800&auto=format&fit=crop",
+    image: LeatherLeggings,
     description: "Stretch leather-look leggings for edgy evening looks."
   },
 
@@ -173,7 +199,7 @@ export const products = [
     name: "Sequin Mini Dress (Sale)",
     category: "Sale",
     price: 99.0,
-    image: "https://images.unsplash.com/photo-1514996937319-344454492b37?q=80&w=800&auto=format&fit=crop",
+    image: SequinMiniDress,
     description: "Party-ready sequin mini at a special sale price."
   },
   {
@@ -181,7 +207,7 @@ export const products = [
     name: "Linen Shirt Dress (Sale)",
     category: "Sale",
     price: 55.0,
-    image: "https://images.unsplash.com/photo-1503341455253-1cfd6e54f0c8?q=80&w=800&auto=format&fit=crop",
+    image: LinenShirtDress,
     description: "Casual linen shirt dress available at a reduced price."
   },
   {
@@ -189,7 +215,7 @@ export const products = [
     name: "Gold Hoop Earrings (Sale)",
     category: "Sale",
     price: 29.99,
-    image: "https://images.unsplash.com/photo-1536305030014-2e6b9f6af6b2?q=80&w=800&auto=format&fit=crop",
+    image: GoldEarringsSale,
     description: "Timeless hoops offered in the sale collection."
   },
   {
@@ -197,7 +223,7 @@ export const products = [
     name: "High-Waist Jeans (Sale)",
     category: "Sale",
     price: 69.99,
-    image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=800&auto=format&fit=crop",
+    image: HighWaistJeansSale,
     description: "Wardrobe staple jeans at a discounted price."
   },
   {
@@ -205,7 +231,7 @@ export const products = [
     name: "Satin Slip Dress (Sale)",
     category: "Sale",
     price: 119.0,
-    image: "https://images.unsplash.com/photo-1520975913453-8a5b6f5a3b2f?q=80&w=800&auto=format&fit=crop",
+    image: SatinSlipDress,
     description: "Satin slip available now as part of our sale."
   }
 ];
